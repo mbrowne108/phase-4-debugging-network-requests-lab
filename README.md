@@ -62,12 +62,24 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: 
+    -Submitted the form
+    -Checked the console error
+    -Saw that Toys was uninitialized on the back end
+    -Found that Toys was written instead of Toy in the create method in the tous controller
 
 - Update the number of likes for a toy
 
   - How I debugged:
+    - Clicked the like
+    - Checked the console error
+    - Saw there was the pesky Unexpected end of JSON error
+    - Checked the update method in toys controller and saw there was no render json line
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+    - Clicked delete
+    - Checked the console error, it was 404
+    - Under network saw that there was no delete route
+    - Added destroy to toys resources route
